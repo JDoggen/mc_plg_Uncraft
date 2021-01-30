@@ -1,0 +1,30 @@
+name: UncraftPlugin
+version: 0.1.0
+main: com.backslide999.uncraft.UncraftPlugin
+api-version: 1.13
+author: Backslide999
+description: Uncraft blocks to their raw materials
+
+softdepend: [PlaceholderAPI]
+
+commands:
+
+  uncraft:
+    description: Main plugin command
+    aliases: [uc]
+    permission-message: §cYou do not have permission to use that command!
+    usage: §9/autopickup help
+
+permissions:
+
+  uncraft.uncraft:
+    description: Allows uncrafting of resources
+    default: op
+
+  uncraft.recipe:
+    description: Allows listing of recipes
+    default: op
+
+  uncraft.reload:
+    description: Allows reloading of plugin
+    default: op

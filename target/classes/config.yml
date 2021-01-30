@@ -1,0 +1,60 @@
+
+
+messages:
+  prefix:
+    info: "§7[§aUncraft§7] §e"
+    warning: "§7[§aUncraft§7] §c"
+  warning:
+    unauthorized: "You're not authorized to execute that command"
+    no_command_line: "You can't run that command from the commandline"
+    hold_item_first: "Please hold an item first!"
+    no_recipe_found: "Could not find the raw materials for the item you're holding"
+    not_enough_items: "You need at least {0} of that item to uncraft it"
+    currently_disabled: "This recipe is currently disabled"
+    reload_error: "Something went wrong during reloading. Please see logging for details!"
+  info:
+    uncraft_recipe_result: "{1} {0} will yield:"
+    uncraft_recipe_resource: "{0} of {1}"
+    reload_success: "Reload succesful!"
+  help:
+    - /uncraft - Uncraft 1 instance of held item
+    - /uncraft all - Uncraft as much as possible of the held item in your inventory
+    - /uncraft recipe - Lists the components and results of unrafting held item
+
+
+recipes:
+  disabled:
+    - BOOKSHELF
+    - BOWL
+    - CHEST
+    - CRAFTING_TABLE
+    - JUKEBOX
+    - NOTE_BLOCK
+    - PISTON
+    - SHIELD
+    - STICK
+    - TRIPWIRE_HOOK
+    - WOODEN_AXE
+    - WOODEN_HOE
+    - WOODEN_PICKAXE
+    - WOODEN_SHOVEL
+    - WOODEN_SWORD
+  default:
+    materials:
+      - CRAFTING_TABLE
+      - BOOKSHELF
+    recipes:
+      CRAFTING_TABLE:
+        amount: 1
+        recipe:
+          - JUNGLE_LOG
+          - JUNGLE_LOG
+          - JUNGLE_LOG
+          - JUNGLE_LOG
+          - JUNGLE_LOG
+          - JUNGLE_LOG
+          - DIAMOND
+
+
+config:
+  max_loop_count: 128
